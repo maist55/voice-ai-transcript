@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Voice AI Transcript</h1>
+
+  <p>
+    Transforme ta voix en texte en temps réel avec une interface simple,
+    claire et professionnelle.
+  </p>
+
+  <div class="buttons">
+    <button (click)="startListening()" [disabled]="isListening">
+      Démarrer
+    </button>
+
+    <button (click)="stopListening()" [disabled]="!isListening">
+      Arrêter
+    </button>
+
+    <button (click)="clearTranscript()">
+      Effacer
+    </button>
+  </div>
+
+  <p *ngIf="isListening" class="status">
+    Micro actif — écoute en cours
+  </p>
+
+  <p *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </p>
+
+  <div class="transcript-box">
+    <h2>Transcription</h2>
+
+    <p *ngIf="transcript; else noText">
+      {{ transcript }}
+    </p>
+
+    <ng-template #noText>
+      <p class="empty">
+        Clique sur “Démarrer”, autorise le micro, puis commence à parler.
+      </p>
+    </ng-template>
+  </div>
+</div>
