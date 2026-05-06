@@ -1,59 +1,33 @@
-# VoiceAiTranscript
+# Voice AI Transcript
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+Voice AI Transcript est une application web développée avec Angular qui permet de transformer la voix en texte en temps réel directement depuis le navigateur.
 
-## Development server
+L’application utilise l’API de reconnaissance vocale du navigateur pour écouter l’utilisateur, transcrire sa voix et afficher le texte dans une interface simple, moderne et professionnelle.
 
-To start a local development server, run:
+## Aperçu
 
-```bash
-ng serve
-```
+L’utilisateur peut :
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- démarrer la reconnaissance vocale ;
+- arrêter l’écoute du microphone ;
+- effacer la transcription ;
+- voir le texte transcrit en temps réel ;
+- recevoir un message d’erreur si son navigateur ne supporte pas la reconnaissance vocale.
 
-## Code scaffolding
+## Technologies utilisées
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Web Speech API
+- Git / GitHub
 
-```bash
-ng generate component component-name
-```
+## Fonctionnalités
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Reconnaissance vocale
 
-```bash
-ng generate --help
-```
+L’application utilise la reconnaissance vocale du navigateur avec :
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```ts
+SpeechRecognition
